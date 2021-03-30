@@ -1,0 +1,82 @@
+.box1 {
+  background-color: white;
+  width: 46rem;
+  position: relative;
+  padding: 2.5rem;
+  text-align: center;
+  border-radius: 10px;
+  margin: auto;
+  margin-top: 12rem;
+  margin-bottom: 2rem;
+
+  @include breakpoint-down(medium) {
+    width: 90%;
+  }
+
+  &__logo {
+    position: absolute;
+    top: -2rem;
+    margin: auto;
+    margin-left: -2rem;
+  }
+
+  .title {
+    margin-top: 0.3rem;
+    margin-bottom: 1rem;
+  }
+
+  .desc {
+    margin-bottom: 2.5rem;
+  }
+
+  &__cta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include breakpoint-down(small) {
+      align-items: flex-start;
+    }
+  }
+
+  .bookmark {
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 1rem 2rem 0.8rem 4.5rem;
+    background-color: $lightGray;
+    color: $darkGray;
+    font-weight: 600;
+    border-radius: 50px;
+    transition: all 150ms ease-in-out;
+
+    @include breakpoint-down(small) {
+      padding: 0;
+      margin-right: 4rem;
+      p {
+        display: none;
+      }
+    }
+
+    svg {
+      left: 0;
+      top: 0;
+      position: absolute;
+    }
+
+    input {
+      display: none;
+    }
+  }
+
+  .bookmark__input:checked + .bookmark__btn {
+    color: $darkCyan;
+
+    svg {
+      circle {
+        fill: $darkCyan;
+      }
+    }
+  }
+}

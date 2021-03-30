@@ -1,0 +1,35 @@
+.continue-modal {
+  padding: 2.5rem;
+  background-color: white;
+  border-radius: 10px;
+  position: absolute;
+  width: 70%;
+  height: auto;
+  left: calc(100% - 85%);
+  top: 9rem;
+  z-index: 100;
+  visibility: hidden;
+
+  @include breakpoint-down(medium) {
+    width: 100%;
+    left: 0;
+  }
+
+  .contents {
+    // border: 1px solid pink;
+    img {
+      margin-bottom: 2rem;
+    }
+    h2 {
+      margin-bottom: 1rem;
+    }
+
+    p {
+      margin-bottom: 2rem;
+    }
+  }
+}
+
+.show-modal2 {
+  visibility: visible;
+}
